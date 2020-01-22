@@ -1,0 +1,31 @@
+1)
+  SELECT primer_nombre, telofono 
+  FROM clientes 
+
+2)
+  SELECT primer_nombre, pais
+  FROM clientes 
+  WHERE pais = "USA"
+
+3)
+  SELECT generos.id, canciones.id_genero, canciones.nombre, genero.nombre
+  FROM canciones
+  INNER JOIN generos ON generos.id = canciones.id_generos
+  WHERE generos.nombre = "Rock"
+
+4)
+  SELECT COUNT(pais) 
+  FROM clientes
+  WHERE pais = "Brasil"
+
+5)
+  SELECT compositor
+  FROM canciones
+  WHERE compositor LIKE "A%"
+
+6)
+  SELECT albumes.nombre, generos.nombre
+  FROM albumes
+  INNER JOIN generos ON generos.id = albumes.id 
+  ORDER BY generos.nombre ASC 
+ 
